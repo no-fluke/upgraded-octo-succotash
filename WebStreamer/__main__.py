@@ -24,7 +24,7 @@ logging.getLogger("aiohttp").setLevel(logging.DEBUG if Var.DEBUG else logging.ER
 logging.getLogger("aiohttp.web").setLevel(logging.DEBUG if Var.DEBUG else logging.ERROR)
 logging.getLogger("telethon").setLevel(logging.INFO if Var.DEBUG else logging.ERROR)
 
-app = web.Application(client_max_size=1024*8) # 8KB
+app = web.Application(client_max_size=0) # 8KB
 app.add_routes(routes)
 server = web.AppRunner(app)
 
